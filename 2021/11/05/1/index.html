@@ -16,23 +16,24 @@
   <meta name="author" content="夏天的风">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="JavaScript专题之递归定义程序调用自身的编程技巧称为递归(recursion)。 阶乘以阶乘为例： 123456function factorial(n) &amp;#123;    if (n &#x3D;&#x3D; 1) return n;    return n * factorial(n - 1)&amp;#125;console.log(factorial(5)) &#x2F;&#x2F; 5 * 4 * 3 * 2 * 1 &#x3D; 1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xiashaoyang.github.io/2022/11/05/hello-world/index.html">
+<meta property="og:title" content="1">
+<meta property="og:url" content="https://xiashaoyang.github.io/2021/11/05/1/index.html">
 <meta property="og:site_name" content="海市蜃楼">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="JavaScript专题之递归定义程序调用自身的编程技巧称为递归(recursion)。 阶乘以阶乘为例： 123456function factorial(n) &amp;#123;    if (n &#x3D;&#x3D; 1) return n;    return n * factorial(n - 1)&amp;#125;console.log(factorial(5)) &#x2F;&#x2F; 5 * 4 * 3 * 2 * 1 &#x3D; 1">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://xiashaoyang.github.io/img/wallhaven-7pg8lo.png">
-<meta property="article:published_time" content="2022-11-05T02:15:22.641Z">
-<meta property="article:modified_time" content="2022-11-05T08:30:06.303Z">
+<meta property="og:image" content="https://xiashaoyang.github.io/img/1.jpg">
+<meta property="article:published_time" content="2021-11-05T11:15:46.000Z">
+<meta property="article:modified_time" content="2022-11-05T11:21:08.870Z">
 <meta property="article:author" content="夏天的风">
+<meta property="article:tag" content="【JavaScript】">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiashaoyang.github.io/img/wallhaven-7pg8lo.png">
+<meta name="twitter:image" content="https://xiashaoyang.github.io/img/1.jpg">
   
   
   
-  <title>Hello World - 海市蜃楼</title>
+  <title>1 - 海市蜃楼</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="1"></span>
           
         </div>
 
@@ -214,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-05 10:15" pubdate>
-          November 5, 2022 am
+        <time datetime="2021-11-05 19:15" pubdate>
+          November 5, 2021 pm
         </time>
       </span>
     
@@ -226,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 words
+          1.7k words
         
       </span>
     
@@ -237,7 +238,7 @@
         
         
         
-          4 mins
+          14 mins
         
       </span>
     
@@ -275,24 +276,60 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">1</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="JavaScript专题之递归"><a href="#JavaScript专题之递归" class="headerlink" title="JavaScript专题之递归"></a>JavaScript专题之递归</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>程序调用自身的编程技巧称为递归(recursion)。</p>
+<h2 id="阶乘"><a href="#阶乘" class="headerlink" title="阶乘"></a>阶乘</h2><p>以阶乘为例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">factorial</span>(<span class="hljs-params">n</span>) &#123;<br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> n;<br>    <span class="hljs-keyword">return</span> n * <span class="hljs-title function_">factorial</span>(n - <span class="hljs-number">1</span>)<br>&#125;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">factorial</span>(<span class="hljs-number">5</span>)) <span class="hljs-comment">// 5 * 4 * 3 * 2 * 1 = 120</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>示意图(图片来自 <a href="wwww.penjee.com">wwww.penjee.com</a>)：</p>
+<p><img src="https://github.com/mqyqingfeng/Blog/raw/master/Images/recursion/factorial.gif" srcset="/img/loading.gif" lazyload alt="阶乘"></p>
+<h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><p>斐波那契数列也使用了递归：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fibonacci</span>(<span class="hljs-params">n</span>)&#123;<br>    <span class="hljs-keyword">return</span> n &lt; <span class="hljs-number">2</span> ? n : <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">1</span>) + <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">2</span>);<br>&#125;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">fibonacci</span>(<span class="hljs-number">5</span>)) <span class="hljs-comment">// 1 1 2 3 5</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<h2 id="递归条件"><a href="#递归条件" class="headerlink" title="递归条件"></a>递归条件</h2><p>从这两个例子中，我们可以看出：</p>
+<p>构成递归需具备边界条件、递归前进段和递归返回段，当边界条件不满足时，递归前进，当边界条件满足时，递归返回。阶乘中的 <code>n == 1</code> 和 斐波那契数列中的 <code>n &lt; 2</code> 都是边界条件。</p>
+<p>总结一下递归的特点：</p>
+<ol>
+<li>子问题须与原始问题为同样的事，且更为简单；</li>
+<li>不能无限制地调用本身，须有个出口，化简为非递归状况处理。</li>
+</ol>
+<p>了解这些特点可以帮助我们更好的编写递归函数。</p>
+<h2 id="执行上下文栈"><a href="#执行上下文栈" class="headerlink" title="执行上下文栈"></a>执行上下文栈</h2><p>我们知道：</p>
+<p>当执行一个函数的时候，就会创建一个执行上下文，并且压入执行上下文栈，当函数执行完毕的时候，就会将函数的执行上下文从栈中弹出。</p>
+<p>试着对阶乘函数分析执行的过程，我们会发现，JavaScript 会不停的创建执行上下文压入执行上下文栈，对于内存而言，维护这么多的执行上下文也是一笔不小的开销呐！那么，我们该如何优化呢？</p>
+<p>答案就是尾调用。</p>
+<h2 id="尾调用"><a href="#尾调用" class="headerlink" title="尾调用"></a>尾调用</h2><p>尾调用，是指函数内部的最后一个动作是函数调用。该调用的返回值，直接返回给函数。</p>
+<p>举个例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 尾调用</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">x</span>)&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-title function_">g</span>(x);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>然而</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 非尾调用</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">x</span>)&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-title function_">g</span>(x) + <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>并不是尾调用，因为 g(x) 的返回值还需要跟 1 进行计算后，f(x)才会返回值。</p>
+<p>两者又有什么区别呢？答案就是执行上下文栈的变化不一样。</p>
+<p>为了模拟执行上下文栈的行为，让我们定义执行上下文栈是一个数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">ECStack</span> = [];<br></code></pre></td></tr></table></figure>
+
+<p>我们模拟下第一个尾调用函数执行时的执行上下文栈变化：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 伪代码</span><br><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">push</span>(&lt;f&gt; functionContext);<br><br><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">pop</span>();<br><br><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">push</span>(&lt;g&gt; functionContext);<br><br><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">pop</span>();<br></code></pre></td></tr></table></figure>
+
+<p>我们再来模拟一下第二个非尾调用函数执行时的执行上下文栈变化：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">push</span>(&lt;f&gt; functionContext);<br><br><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">push</span>(&lt;g&gt; functionContext);<br><br><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">pop</span>();<br><br><span class="hljs-title class_">ECStack</span>.<span class="hljs-title function_">pop</span>();<br></code></pre></td></tr></table></figure>
+
+<p>也就说尾调用函数执行时，虽然也调用了一个函数，但是因为原来的的函数执行完毕，执行上下文会被弹出，执行上下文栈中相当于只多压入了一个执行上下文。然而非尾调用函数，就会创建多个执行上下文压入执行上下文栈。</p>
+<p>函数调用自身，称为递归。如果尾调用自身，就称为尾递归。</p>
+<p>所以我们只用把阶乘函数改造成一个尾递归形式，就可以避免创建那么多的执行上下文。但是我们该怎么做呢？</p>
+<h2 id="阶乘函数优化"><a href="#阶乘函数优化" class="headerlink" title="阶乘函数优化"></a>阶乘函数优化</h2><p>我们需要做的就是把所有用到的内部变量改写成函数的参数，以阶乘函数为例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">factorial</span>(<span class="hljs-params">n, res</span>) &#123;<br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> res;<br>    <span class="hljs-keyword">return</span> <span class="hljs-title function_">factorial2</span>(n - <span class="hljs-number">1</span>, n * res)<br>&#125;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">factorial</span>(<span class="hljs-number">4</span>, <span class="hljs-number">1</span>)) <span class="hljs-comment">// 24</span><br></code></pre></td></tr></table></figure>
+
+<p>然而这个很奇怪呐……我们计算 4 的阶乘，结果函数要传入 4 和 1，我就不能只传入一个 4 吗？</p>
+<p>这个时候就要用编写的 curry 函数了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> newFactorial = <span class="hljs-title function_">curry</span>(factorial, _, <span class="hljs-number">1</span>)<br><br><span class="hljs-title function_">newFactorial</span>(<span class="hljs-number">5</span>) <span class="hljs-comment">// 24</span><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -302,6 +339,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E3%80%90JavaScript%E3%80%91/">#【JavaScript】</a>
+      
+    </div>
+  
 </div>
 
 
@@ -310,8 +354,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>https://xiashaoyang.github.io/2022/11/05/hello-world/</div>
+      <div>1</div>
+      <div>https://xiashaoyang.github.io/2021/11/05/1/</div>
     </div>
     <div class="license-meta">
       
@@ -323,7 +367,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>November 5, 2022</div>
+          <div>November 5, 2021</div>
         </div>
       
       
@@ -355,21 +399,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/05/post/" title="利用github搭建Hexo静态网页">
+                      <a href="/2022/11/05/hello-world/" title="Hello World">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">利用github搭建Hexo静态网页</span>
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2021/11/05/1/" title="1">
-                        <span class="hidden-mobile">1</span>
-                        <span class="visible-mobile">Next</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
